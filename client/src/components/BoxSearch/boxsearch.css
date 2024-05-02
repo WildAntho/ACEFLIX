@@ -137,6 +137,10 @@
   margin: 0;
 }
 
+.elements-container {
+  width: 250px;
+}
+
 @media (max-width: 1025px) {
   .box-container {
     width: 95%;
@@ -177,5 +181,8 @@
   }
   .card-search-container {
     width: 100px;
+  }
+  .elements-container {
+    width: 200px;
   }
 }
