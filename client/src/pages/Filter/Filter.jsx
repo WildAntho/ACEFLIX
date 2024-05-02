@@ -2,8 +2,6 @@
 /* eslint-disable import/no-duplicates */
 import { useParams } from "react-router-dom";
 import { useContext, useEffect, useState } from "react";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { MdOutlineArrowBackIosNew } from "react-icons/md";
 import FilterMovies from "../../components/FilterButtons/FilterMovies";
 import FilterSeries from "../../components/FilterButtons/FilterSeries";
 import useFetch from "../../useFetch";
@@ -145,15 +143,13 @@ export default function Filter() {
               className={page === 1 ? "button-filter-stop" : "button-filter"}
             >
               {" "}
-              <p className="href-disable">Pour le href</p>
-              <MdOutlineArrowBackIosNew className="arrow-page" />
+              <p className="href-disable">Previous</p>
             </button>
           </a>
-          <p className="pagination">{page}</p>
+          <p className="pagination">Page {page}</p>
           <a href="#top-page" onClick={() => setPage(page + 1)}>
             <button type="button" className="button-filter">
-              <p className="href-disable">Pour le href</p>
-              <MdOutlineArrowForwardIos className="arrow-page" />
+              <p className="href-disable">Next</p>
             </button>
           </a>
         </div>

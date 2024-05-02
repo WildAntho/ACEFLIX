@@ -46,10 +46,10 @@
 }
 .type-movie-serie-title {
   color: white;
-  /* opacity: 0.6; */
   font-size: 60px;
   margin: 10px 0;
 }
+
 .type-movie-serie-desc {
   color: whitesmoke;
   font-size: 13px;
@@ -79,6 +79,7 @@
 .pagination {
   color: whitesmoke;
   margin: 0 10px;
+  font-size: 13px;
 }
 
 a {
@@ -86,7 +87,7 @@ a {
 }
 
 .href-disable {
-  display: none;
+  color: whitesmoke;
 }
 
 .genre-display {
@@ -95,6 +96,38 @@ a {
   font-weight: 700;
   font-size: 20px;
   font-style: italic;
+}
+
+.button-filter-stop {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 7px;
+  margin: 10px;
+  background-color: rgba(61, 61, 61, 0.4);
+}
+
+.button-filter-stop p {
+  color: rgb(245, 245, 245, 0.4);
+}
+
+.button-filter {
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  border-radius: 7px;
+  margin: 10px;
+  background-color: rgba(61, 61, 61, 0.7);
+}
+
+.button-filter:hover {
+  background-color: rgba(61, 61, 61);
 }
 
 @media (max-width: 1025px) {

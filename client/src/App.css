@@ -100,6 +100,9 @@ header {
   #Footer-list {
     font-size: 15px;
   }
+  header {
+    z-index: 111;
+  }
 }
 
 /* Media pour mobile */
