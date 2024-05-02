@@ -34,9 +34,11 @@ export default function BoxSearch({ setDisplay }) {
     if (content.release_date) {
       navigate(`/final/movie/${content.id}`);
       setDisplay(false);
+      document.body.classList.remove("active");
     } else {
       navigate(`/final/tv/${content.id}`);
       setDisplay(false);
+      document.body.classList.remove("active");
     }
   };
   // Fonction pour fermer la popup de recherche

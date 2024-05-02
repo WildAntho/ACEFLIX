@@ -63,7 +63,7 @@
 }
 
 .contents-card-search {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
 .content-card-search {
@@ -144,6 +144,12 @@
   }
   .card-search-container {
     width: 140px;
+  }
+  .contents-card-search {
+    margin-bottom: 80px;
+  }
+  .search-card-display {
+    margin-bottom: 80px;
   }
 }
 
