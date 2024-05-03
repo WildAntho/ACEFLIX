@@ -19,15 +19,6 @@
   }
 }
 
-@keyframes fromRight {
-  from {
-    transform: translateX(1000px);
-  }
-  to {
-    transform: translate(0px);
-  }
-}
-
 .bannerContainer {
   width: 100%;
   display: flex;
@@ -242,7 +233,7 @@
   text-shadow: 0 0 5px black;
   padding-left: 20px;
   transition: all 0.5s ease-in-out;
-  animation: fromRight 0.5s ease-in-out alternate backwards;
+  animation: fromLeft 0.5s ease-in-out alternate backwards;
 }
 
 .second-container p {
@@ -259,7 +250,7 @@
 @media screen and (max-width: 1025px) {
   .image-box {
     width: 300px;
-    height: 350px;
+    height: 400px;
   }
 
   .first-container .image-box img {
@@ -308,8 +299,8 @@
 
   .image-box {
     margin-top: 20px;
-    width: 250px;
-    height: 300px;
+    width: 230px;
+    height: 350px;
   }
 
   .title {
