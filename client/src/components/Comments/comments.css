@@ -154,16 +154,18 @@
 @media (max-width: 1025px) {
   #Comments {
     width: 100%;
-    margin-left: 10px;
-    padding-right: 10px;
+    margin: 0;
   }
   .user-input-container {
     width: 100%;
-    margin: 10px 0;
-    padding: 0 10px;
+    margin: 0;
+    padding: 0 20px;
   }
   .list p {
     line-height: 20px;
+  }
+  .all-list-container {
+    margin: 0 10px;
   }
 }
 
