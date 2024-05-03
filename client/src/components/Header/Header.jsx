@@ -89,7 +89,7 @@ export default function Header({
           </button>
         </div>
       </div>
-      {display && <BoxSearch setDisplay={setDisplay} />}
+      <BoxSearch setDisplay={setDisplay} display={display} />
       {display && (
         <div
           className="screen-cover-black"

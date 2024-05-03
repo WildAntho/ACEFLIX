@@ -4,7 +4,6 @@ import { useNavigate } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 import { IoHomeOutline } from "react-icons/io5";
 import { BiCameraMovie } from "react-icons/bi";
-import { MdOutlineAccountCircle } from "react-icons/md";
 import { BiMoviePlay } from "react-icons/bi";
 import aceflixLogo from "../../assets/images/aceflixLogo.png";
 import "./nav.css";
@@ -94,10 +93,6 @@ export default function Nav({
             className={!serieActive ? "icon-nav" : "icon-nav active-link"}
           />
           <p>Series</p>
-        </li>
-        <li className="list-nav-elements">
-          <MdOutlineAccountCircle className="icon-nav" />
-          <p>Account</p>
         </li>
       </ul>
       <div className="logo" onClick={navigateHome} role="presentation">
