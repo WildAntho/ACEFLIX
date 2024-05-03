@@ -105,14 +105,15 @@ export default function Comments({ comments }) {
                 </span>
               </p>{" "}
               <div className="show-more">
-                {comment.content.length > 400 ? (
+                {comment.content.length > 400 && readMore !== index && (
                   <p className="comment-content">
                     ? {comment.content.slice(0, 400)} ...{" "}
                   </p>
-                ) : (
-                  <p> {comment.content} </p>
                 )}
-                {readMore !== index && (
+                {readMore === index || comment.content.length <= 400 ? (
+                  <p> {comment.content} </p>
+                ) : null}
+                {comment.content.length > 400 && readMore !== index && (
                   <p
                     className="show-more-button"
                     onClick={() => {
@@ -124,11 +125,6 @@ export default function Comments({ comments }) {
                   </p>
                 )}
               </div>
-              {readMore === index && (
-                <div className="show-more">
-                  <p className="comment-content">{comment.content}</p>
-                </div>
-              )}
             </div>
           ))}
         </div>
