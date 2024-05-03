@@ -163,19 +163,33 @@ export default function BoxSearch({ setDisplay, display }) {
               : "No result for your research..."}
           </h1>
           <div className="search-card-display">
-            {searchResults?.map(
-              (content) =>
-                content.poster_path && (
-                  <div
-                    key={content.id}
-                    className="card-search-container"
-                    onClick={handleClose}
-                    role="presentation"
-                  >
-                    <Card card={content} />
-                  </div>
+            {searchResults[0]?.media_type === "person"
+              ? searchResults[0].known_for?.map(
+                  (content) =>
+                    content.poster_path && (
+                      <div
+                        key={content.id}
+                        className="card-search-container"
+                        onClick={handleClose}
+                        role="presentation"
+                      >
+                        <Card card={content} />
+                      </div>
+                    )
                 )
-            )}
+              : searchResults?.map(
+                  (content) =>
+                    content.poster_path && (
+                      <div
+                        key={content.id}
+                        className="card-search-container"
+                        onClick={handleClose}
+                        role="presentation"
+                      >
+                        <Card card={content} />
+                      </div>
+                    )
+                )}
           </div>
         </div>
       )}
