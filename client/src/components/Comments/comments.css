@@ -1,58 +1,83 @@
 #Comments {
   color: white;
-  padding: 5px;
   line-height: 25px;
   width: 90%;
   box-sizing: border-box;
-  margin: 10px;
   border-radius: 5px;
   transition: all 0.5s ease-in-out;
-  margin: 50px;
+  margin: 30px;
   font-weight: 300;
   overflow: hidden;
-}
-#Comments:hover {
-  box-shadow: 0 0 5px rgb(94, 94, 94);
-}
-#Comments h2 {
-  text-align: center;
 }
 
 .user-input-container {
   box-sizing: border-box;
-  width: 80%;
-  margin: 20px auto;
+  width: 90%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
-
+  align-items: flex-start;
   border-radius: 5px;
-  overflow: hidden;
-  transform: scale(0.8);
-  transition: all 0.5s ease-in-out;
-  box-shadow: 0 0 5px #b53dff;
 }
-.user-input-container input {
-  padding: 20px;
+
+.input-comments {
+  padding: 10px 0 10px 10px;
+  margin-bottom: 10px;
   border: none;
+  border-bottom: solid rgb(245, 245, 245, 0.5) thin;
   color: white;
   background-color: black;
-}
-.user-input-container:hover {
-  box-shadow: 0 0 20px #b53dff;
-  transform: scale(1);
+  width: 100%;
+  font-size: 15px;
 }
 
-.user-input-container input:focus {
+.input-comments::placeholder {
+  color: whitesmoke;
+  opacity: 0.6;
+}
+
+.input-comments:focus {
+  border-bottom: solid rgb(245, 245, 245) thin;
   outline: none;
+  transition: all 0.3s ease-in-out;
 }
 
-.user-input-container input::placeholder {
-  font-style: italic;
+.buttons-container-comments {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  gap: 10px;
 }
-.user-input-container button {
-  padding: 10px;
-  border-radius: 0px;
+
+.add-button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  background-color: #b53dff;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.add-button-none {
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  background-color: #b53dff;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.add-button:hover {
+  background-color: #ce7fff;
+}
+
+.cancel-button {
+  padding: 10px 20px;
+  border-radius: 25px;
   font-weight: 600;
   background-color: black;
   color: #b53dff;
@@ -60,48 +85,18 @@
   transition: all 0.2s ease-in-out;
 }
 
-.user-input-container button:hover {
-  transform: scale(1.2);
-  background-color: #b53dff;
-  color: black;
-  padding: 15px 10px;
-}
-.user-input-container .input-name {
-  width: 20%;
-}
-.user-input-container .input-name-error {
-  color: red;
-}
-.user-input-container .input-comments {
-  margin-left: 50px;
-  width: 70%;
-}
-.list {
-  padding: 15px;
-  margin: 10px;
-  box-shadow: 0 0 5px rgb(0, 0, 0);
-  border-radius: 5px;
-  transition: all 0.5s ease-in-out;
-  position: relative;
-  animation: fromLeft 1s ease-in-out alternate backwards;
+.cancel-button:hover {
+  background-color: rgb(60, 60, 60);
 }
 
-@keyframes fromLeft {
-  from {
-    transform: translateX(-1000px);
-  }
-  to {
-    transform: translateX(0px);
-  }
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 10px;
+  position: relative;
 }
-.all-list-container {
-  box-sizing: border-box;
-  overflow: scroll;
-  overflow-y: scroll;
-  scrollbar-color: rgb(193, 58, 251) transparent;
-  scroll-behavior: smooth;
-  max-height: 400px;
-}
+
 .comments-list-container {
   display: flex;
   flex-direction: column-reverse;
@@ -113,10 +108,12 @@
   font-size: 15px;
   text-align: left;
 }
-.list:hover {
-  box-shadow: 0 0 10px #b53dff;
 
-  background-color: black;
+.username {
+  margin: 0px;
+  font-size: 15px;
+  font-weight: 700;
+  text-align: left;
 }
 
 .user-btn {
@@ -124,13 +121,14 @@
   font-size: 15px;
   margin-right: 10px;
 }
+
 .date {
+  font-size: 12px;
+  font-weight: 400;
   font-style: italic;
-  transform: scale(0.6);
-  position: absolute;
-  left: 5px;
-  top: 40px;
+  color: rgb(192, 192, 192);
 }
+
 .delete-comment {
   font-weight: 800;
   color: white;
@@ -142,67 +140,66 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
-.delete-comment:hover {
-  color: #b53dff;
-  font-size: 25px;
+
+.show-more-button {
+  color: gray;
+  font-size: 12px;
+  font-style: italic;
+  cursor: pointer;
 }
 
-@media screen and (max-width: 900px) {
+.show-more-button:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1025px) {
   #Comments {
-    width: 90%;
-    padding: 0px;
-    margin: 5px auto;
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  #Comments {
-    width: 90%;
-    padding: 0px;
-    margin: 5px auto;
-    font-size: 10px;
-  }
-
-  .input-name {
-    width: 40%;
-  }
-  .input-name-error {
-    width: 40%;
-  }
-}
-
-@media screen and (max-width: 450px) {
-  .all-list-container {
-    max-height: 300px;
-  }
-  .list p {
-    margin: 0px;
-    font-size: 12px;
-    text-align: left;
-  }
-  .user-input-container .input-name {
-    width: 80%;
-    text-align: center;
-  }
-  .input-name-error {
-    width: 80%;
-  }
-  .user-input-container .input-comments {
-    width: 80%;
-    text-align: center;
-    margin-left: 0;
+    width: 100%;
+    margin-left: 10px;
   }
   .user-input-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transform: none;
-    width: 90%;
-    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+    padding: 0 10px;
   }
+  .list p {
+    line-height: 20px;
+  }
+}
 
-  .user-input-container input {
-    padding: 10px;
+@media (max-width: 600px) {
+  .list p {
+    font-size: 10px;
+    line-height: 15px;
+  }
+  .show-more-button {
+    font-size: 7px;
+  }
+  .add-button-none {
+    padding: 6px 13px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .add-button {
+    padding: 6px 13px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .cancel-button {
+    padding: 6px 13px;
+    border-radius: 25px;
+    font-size: 11px;
+    font-weight: 500;
+  }
+  .input-comments::placeholder {
+    font-size: 10px;
+  }
+  .input-comments {
+    font-size: 10px;
+  }
+  .date {
+    font-size: 8px;
   }
 }

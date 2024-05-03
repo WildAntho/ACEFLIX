@@ -1,30 +1,23 @@
 import { useState } from "react";
 import "./comments.css";
 import { FaUser } from "react-icons/fa";
+import { IoMdClose } from "react-icons/io";
 import PropTypes from "prop-types";
 
 export default function Comments({ comments }) {
-  const [nameValue, setNameValue] = useState("");
   const [commentValue, setCommentValue] = useState("");
   const [addComment, SetAddComment] = useState([]);
-
-  const handleNameValue = (e) => {
-    setNameValue(e.target.value);
-  };
+  const [readMore, setReadMore] = useState(null);
 
   const handleCommentValue = (e) => {
     setCommentValue(e.target.value);
   };
 
   const addNewComment = () => {
-    if (!nameValue || !commentValue) {
-      return ;
+    if (!commentValue) {
+      return;
     }
-    SetAddComment([
-      ...addComment,
-      { id: new Date(), name: nameValue, comment: commentValue },
-    ]);
-    setNameValue("");
+    SetAddComment([...addComment, { id: new Date(), comment: commentValue }]);
     setCommentValue("");
   };
 
@@ -38,18 +31,18 @@ export default function Comments({ comments }) {
     SetAddComment(addComment.filter((_, i) => i !== index));
   };
 
+  const handleDelete = () => {
+    setCommentValue("");
+  };
+
+  const handleShow = (index) => {
+    setReadMore(index);
+  };
+
   return (
     <div id="Comments">
       <h2>COMMENTS</h2>
       <div className="user-input-container">
-        <input
-          className={!nameValue ? "input-name-error" : "input-name"  }
-          type="text"
-          value={nameValue}
-          onInput={handleNameValue}
-          placeholder={nameValue ?  "your name" : "name is required"  }
-          onKeyDown={keyPressed}
-        />
         <input
           className="input-comments"
           type="text"
@@ -58,9 +51,24 @@ export default function Comments({ comments }) {
           placeholder="Enter your comment..."
           onKeyDown={keyPressed}
         />
-        <button type="button" onClick={addNewComment}>
-          ADD
-        </button>
+        <div className="buttons-container-comments">
+          <button
+            type="button"
+            className="cancel-button"
+            onClick={handleDelete}
+          >
+            Cancel
+          </button>
+          <button
+            type="button"
+            className={
+              commentValue.length > 0 ? "add-button" : "add-button-none"
+            }
+            onClick={addNewComment}
+          >
+            Add comment
+          </button>
+        </div>
       </div>
 
       <div className="all-list-container">
@@ -71,33 +79,56 @@ export default function Comments({ comments }) {
                 <p className="username">
                   {" "}
                   <FaUser className="user-btn" />
-                  {add.name}
+                  You <span className="date"> posted just Now</span>
                 </p>
-                <br />
                 <p className="comment-content">{add.comment}</p>
-                <p className="date">added just now</p>
                 <button
                   type="button"
                   className="delete-comment"
                   onClick={() => deleteComment(index)}
+                  aria-label="button-delete"
                 >
-                  {" "}
-                  x{" "}
+                  <IoMdClose />
                 </button>
               </div>
             ))}
         </div>
 
         <div className="comments-list-container">
-          {comments.map((comment) => (
+          {comments.map((comment, index) => (
             <div key={comment.id} className="list">
               <p className="username">
                 {" "}
-                <FaUser className="user-btn" /> {comment.author}
+                <FaUser className="user-btn" /> {comment.author}{" "}
+                <span className="date">
+                  posted on {comment.created_at.slice(0, 10)}
+                </span>
               </p>{" "}
-              <br />
-              <p className="comment-content">{comment.content}</p>
-              <p className="date">{comment.created_at.slice(0, 10)}</p>
+              <div className="show-more">
+                {comment.content.length > 400 ? (
+                  <p className="comment-content">
+                    ? {comment.content.slice(0, 400)} ...{" "}
+                  </p>
+                ) : (
+                  <p> {comment.content} </p>
+                )}
+                {readMore !== index && (
+                  <p
+                    className="show-more-button"
+                    onClick={() => {
+                      handleShow(index);
+                    }}
+                    role="presentation"
+                  >
+                    Show more
+                  </p>
+                )}
+              </div>
+              {readMore === index && (
+                <div className="show-more">
+                  <p className="comment-content">{comment.content}</p>
+                </div>
+              )}
             </div>
           ))}
         </div>
