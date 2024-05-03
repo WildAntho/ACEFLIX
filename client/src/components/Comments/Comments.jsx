@@ -41,7 +41,7 @@ export default function Comments({ comments }) {
 
   return (
     <div id="Comments">
-      <h2>COMMENTS</h2>
+      <h2 className="suggest-title">COMMENTS</h2>
       <div className="user-input-container">
         <input
           className="input-comments"
