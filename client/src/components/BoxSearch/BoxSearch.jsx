@@ -9,7 +9,7 @@ import { IoClose } from "react-icons/io5";
 import VideoContext from "../ContextVideo";
 import Card from "../Card/Card";
 
-export default function BoxSearch({ setDisplay }) {
+export default function BoxSearch({ setDisplay, display }) {
   const apiKey = import.meta.env.VITE_API_KEY;
   const { setUrlVideo, setBlackScreen } = useContext(VideoContext);
   const navigate = useNavigate();
@@ -34,10 +34,12 @@ export default function BoxSearch({ setDisplay }) {
     if (content.release_date) {
       navigate(`/final/movie/${content.id}`);
       setDisplay(false);
+      setInput("");
       document.body.classList.remove("active");
     } else {
       navigate(`/final/tv/${content.id}`);
       setDisplay(false);
+      setInput("");
       document.body.classList.remove("active");
     }
   };
@@ -46,6 +48,8 @@ export default function BoxSearch({ setDisplay }) {
     setDisplay(false);
     document.body.classList.remove("active");
   };
+
+  // Fonction pour envoyer l'url de la vidéo à Fetch
   const handleVideo = (id, releaseDate) => {
     setBlackScreen(true);
     if (releaseDate) {
@@ -69,11 +73,22 @@ export default function BoxSearch({ setDisplay }) {
     setInput("");
   };
 
+  const variants = {
+    open: {
+      x: 0,
+      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+    },
+    closed: {
+      x: "120%",
+      transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
+    },
+  };
+
   return (
     <motion.section
-      initial={{ x: "100%" }}
-      animate={{ x: 0 }}
-      transition={{ duration: 0.4, ease: "easeInOut" }}
+      variants={variants}
+      animate={display ? "open" : "closed"}
+      initial="closed"
       className="box-container"
     >
       <div className="box-pop">
@@ -170,4 +185,5 @@ export default function BoxSearch({ setDisplay }) {
 
 BoxSearch.propTypes = {
   setDisplay: PropTypes.func.isRequired,
+  display: PropTypes.bool.isRequired,
 };
