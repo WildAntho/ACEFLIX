@@ -53,9 +53,9 @@ header {
     font-size: 35px;
   }
   nav {
-    position: sticky;
+    position: fixed;
     bottom: 0;
-    right: 0;
+    top: auto;
   }
   .blackscreen-nav {
     display: none;

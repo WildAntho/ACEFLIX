@@ -127,6 +127,9 @@
   .hr {
     margin: 30px;
   }
+  .copyright {
+    margin-bottom: 100px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -141,8 +144,8 @@
     width: 100%;
   }
   .copyright {
-    gap: 5px;
-    font-size: 10px;
+    gap: 3px;
+    font-size: 8px;
   }
   .navigation-title {
     font-size: 16px;
