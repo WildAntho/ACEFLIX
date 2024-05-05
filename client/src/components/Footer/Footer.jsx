@@ -112,6 +112,7 @@ export default function Footer({
           <p>Your Privacy Choices</p>
         </div>
       </div>
+      <div className="footer-black">Linter</div>
     </section>
   );
 }
