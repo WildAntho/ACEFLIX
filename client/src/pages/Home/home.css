@@ -1,7 +1,7 @@
 #SecondHeader {
   position: fixed;
-  top: 100px;
-  z-index: 50;
+  top: 90px;
+  z-index: 99;
 }
 
 .active {

@@ -9,6 +9,7 @@ import Card from "../../components/Card/Card";
 import VideoContext from "../../components/ContextVideo";
 import Video from "../../components/Video/Video";
 import "./filter.css";
+import Pagination from "../../components/Pagination/Pagination";
 
 export default function Filter() {
   const { type } = useParams();
@@ -136,7 +137,7 @@ export default function Filter() {
         <div className="pagination-wrapper">
           <a
             href={page > 1 ? "#top-page" : null}
-            onClick={() => page > 1 && setPage(page - 1)}
+            onClick={() => page > 1 && setPage((prev) => prev - 1)}
           >
             <button
               type="button"
@@ -146,9 +147,15 @@ export default function Filter() {
               <p className="href-disable">Previous</p>
             </button>
           </a>
-          <p className="pagination">Page {page}</p>
-          <a href="#top-page" onClick={() => setPage(page + 1)}>
-            <button type="button" className="button-filter">
+          <Pagination page={page} setPage={setPage} />
+          <a
+            href={page < 100 ? "#top-page" : null}
+            onClick={() => page < 100 && setPage((prev) => prev + 1)}
+          >
+            <button
+              type="button"
+              className={page === 100 ? "button-filter-stop" : "button-filter"}
+            >
               <p className="href-disable">Next</p>
             </button>
           </a>

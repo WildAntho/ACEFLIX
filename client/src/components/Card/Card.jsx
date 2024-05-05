@@ -17,7 +17,8 @@ export default function Card({ card }) {
 
   const { setUrlVideo, setBlackScreen } = useContext(VideoContext);
 
-  const handleUrlVideo = () => {
+  const handleUrlVideo = (e) => {
+    e.stopPropagation();
     setBlackScreen(true);
     document.body.classList.add("active");
     if (card.release_date) {
@@ -59,14 +60,13 @@ export default function Card({ card }) {
   }
 
   return (
-    <div id="card">
+    <div id="card" onClick={handleNavigate} role="presentation">
       {newDateMovie > new Date() && (
         <div className="appreciated">
           <p>Coming soon</p>
         </div>
       )}
       <img
-        onClick={handleNavigate}
         role="presentation"
         src={`https://image.tmdb.org/t/p/w500/${card.poster_path}`}
         alt="posterImage"

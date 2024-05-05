@@ -107,7 +107,7 @@ export default function Comments({ comments }) {
               <div className="show-more">
                 {comment.content.length > 400 && readMore !== index && (
                   <p className="comment-content">
-                    ? {comment.content.slice(0, 400)} ...{" "}
+                    {comment.content.slice(0, 400)} ...{" "}
                   </p>
                 )}
                 {readMore === index || comment.content.length <= 400 ? (
