@@ -75,10 +75,34 @@ export default function Footer({
         <div className="navigation-wrapper">
           <h1 className="navigation-title">About</h1>
           <div className="about-wrapper">
-            <FaLinkedinIn id="linkedin" className="logo-link" />
-            <FaGithub id="github" className="logo-link" />
-            <FaInstagram id="insta" className="logo-link" />
-            <FaFacebook id="facebook" className="logo-link" />
+            <a
+              href="https://www.linkedin.com/in/anthony-dufrenot-64275510a/"
+              target="blank"
+              aria-label="link"
+            >
+              <FaLinkedinIn id="linkedin" className="logo-link" />
+            </a>
+            <a
+              href="https://github.com/WildAntho"
+              target="blank"
+              aria-label="link"
+            >
+              <FaGithub id="github" className="logo-link" />
+            </a>
+            <a
+              href="https://www.instagram.com/anthony.dufrenot/"
+              target="blank"
+              aria-label="link"
+            >
+              <FaInstagram id="insta" className="logo-link" />
+            </a>
+            <a
+              href="https://www.facebook.com/adufrenot"
+              target="blank"
+              aria-label="link"
+            >
+              <FaFacebook id="facebook" className="logo-link" />
+            </a>
           </div>
           <a href="#haut-page" aria-label="anker">
             <img
