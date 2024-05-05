@@ -74,6 +74,8 @@
 .pagination-wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin: 10px 0;
 }
 
 .pagination {
@@ -111,7 +113,7 @@ a {
 }
 
 .button-filter-stop p {
-  color: rgb(245, 245, 245, 0.4);
+  opacity: 0.2;
 }
 
 .button-filter {
@@ -127,7 +129,7 @@ a {
 }
 
 .button-filter:hover {
-  background-color: rgba(61, 61, 61);
+  background-color: #b53dff;
 }
 
 @media (max-width: 1025px) {
@@ -171,5 +173,15 @@ a {
   }
   .banner-serie {
     background-position: right;
+  }
+  .button-filter-stop {
+    font-size: 10px;
+    width: 60px;
+    height: 30px;
+  }
+  .button-filter {
+    font-size: 10px;
+    width: 60px;
+    height: 30px;
   }
 }
