@@ -1,0 +1,159 @@
+#footer {
+  background-color: rgba(181, 61, 255, 0.2);
+  width: 100vw;
+  margin-top: 30px;
+  z-index: 0;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 90px;
+}
+
+.top-footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 0 90px;
+  padding-top: 30px;
+}
+
+.navigation-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.about-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+
+.navigation-title {
+  color: whitesmoke;
+  font-size: 20px;
+  margin: 0 0 15px 0;
+}
+
+.navigation-link {
+  font-size: 15px;
+  margin: 0;
+  color: whitesmoke;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.navigation-link:hover {
+  opacity: 1;
+}
+
+#linkedin:hover {
+  color: rgba(10, 102, 194);
+}
+
+#github:hover {
+  color: whitesmoke;
+}
+
+#insta:hover {
+  color: rgb(193, 53, 132);
+}
+
+#facebook:hover {
+  color: rgb(66, 103, 178);
+}
+
+.aceflix-logo {
+  width: 100px;
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.copyright {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+  color: whitesmoke;
+  font-size: 12px;
+  font-weight: 300;
+  opacity: 0.6;
+  margin-bottom: 30px;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.point-separator {
+  padding-bottom: 6px;
+}
+
+.logo-link {
+  color: whitesmoke;
+  margin: 0 10px;
+  cursor: pointer;
+  opacity: 0.6;
+  font-size: 20px;
+}
+
+.logo-link:hover {
+  opacity: 1;
+}
+
+.hr {
+  color: whitesmoke;
+  opacity: 0.6;
+  margin: 30px 90px;
+}
+
+@media (max-width: 1025px) {
+  .top-footer-wrapper {
+    flex-wrap: wrap;
+    margin: 0 30px;
+  }
+  .navigation-wrapper {
+    width: 50%;
+  }
+  .footer-wrapper {
+    margin: 0 30px;
+  }
+  .hr {
+    margin: 30px;
+  }
+}
+
+@media (max-width: 600px) {
+  .top-footer-wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 0 30px;
+  }
+  .navigation-wrapper {
+    width: 100%;
+  }
+  .copyright {
+    gap: 5px;
+    font-size: 10px;
+  }
+  .navigation-title {
+    font-size: 16px;
+  }
+  .navigation-link {
+    font-size: 12px;
+  }
+  .aceflix-logo {
+    width: 90px;
+  }
+  .logo-link {
+    font-size: 17px;
+  }
+}

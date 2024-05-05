@@ -4,6 +4,7 @@ import "./App.css";
 import Nav from "./components/Nav/Nav";
 import Header from "./components/Header/Header";
 import BlackScreen from "./components/BlackScreen/BlackScreen";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,6 +20,11 @@ export default function App() {
         setSerieActive={setSerieActive}
       />
       <Outlet />
+      <Footer
+        setHomeActive={setHomeActive}
+        setMovieActive={setMovieActive}
+        setSerieActive={setSerieActive}
+      />
       <Nav
         setIsOpen={setIsOpen}
         isOpen={isOpen}
