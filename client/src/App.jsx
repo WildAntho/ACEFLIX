@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import "./App.css";
 import Nav from "./components/Nav/Nav";
@@ -11,6 +11,15 @@ export default function App() {
   const [homeActive, setHomeActive] = useState(true);
   const [movieActive, setMovieActive] = useState(false);
   const [serieActive, setSerieActive] = useState(false);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(false);
+    setTimeout(() => {
+      setLoading(true);
+    }, 1000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [homeActive, movieActive, serieActive]);
   return (
     <>
       <Header
@@ -20,11 +29,13 @@ export default function App() {
         setSerieActive={setSerieActive}
       />
       <Outlet />
-      <Footer
-        setHomeActive={setHomeActive}
-        setMovieActive={setMovieActive}
-        setSerieActive={setSerieActive}
-      />
+      {loading && (
+        <Footer
+          setHomeActive={setHomeActive}
+          setMovieActive={setMovieActive}
+          setSerieActive={setSerieActive}
+        />
+      )}
       <Nav
         setIsOpen={setIsOpen}
         isOpen={isOpen}

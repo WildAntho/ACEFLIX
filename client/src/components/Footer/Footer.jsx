@@ -106,7 +106,7 @@ export default function Footer({
           </div>
           <a href="#haut-page" aria-label="anker">
             <img
-              className="aceflix-logo"
+              className="aceflix-logo-footer"
               src={aceflixLogo}
               alt="Aceflix-Logo"
               role="presentation"
