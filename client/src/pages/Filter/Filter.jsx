@@ -10,6 +10,7 @@ import VideoContext from "../../components/ContextVideo";
 import Video from "../../components/Video/Video";
 import "./filter.css";
 import Pagination from "../../components/Pagination/Pagination";
+import Loading from "../../components/Loading/Loading";
 
 export default function Filter() {
   const { type } = useParams();
@@ -26,6 +27,16 @@ export default function Filter() {
   const [idGenre, setIdGenre] = useState(0);
   const [genreStatus, setGenreStatus] = useState(false);
   const { blackScreen } = useContext(VideoContext);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+    document.body.classList.add("active");
+    setTimeout(() => {
+      setLoading(false);
+      document.body.classList.remove("active");
+    }, 750);
+  }, [type]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -67,6 +78,7 @@ export default function Filter() {
 
   return (
     <section id="top-page" className="filter-global">
+      {loading && <Loading loading={loading} setLoading={setLoading} />}
       {blackScreen && <Video />}
       <div className={type === "movie" ? "banner-movie" : "banner-serie"}>
         <div className="type-movie-serie">
