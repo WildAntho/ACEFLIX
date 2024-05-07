@@ -46,6 +46,7 @@ export default function BoxSearch({ setDisplay, display }) {
   // Fonction pour fermer la popup de recherche
   const handleClose = () => {
     setDisplay(false);
+    setInput("");
     document.body.classList.remove("active");
   };
 

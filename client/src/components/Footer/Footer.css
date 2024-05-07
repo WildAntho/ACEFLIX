@@ -27,7 +27,7 @@
   justify-content: space-around;
   align-items: flex-start;
   margin: 0 90px;
-  padding-top: 60px;
+  padding-top: 80px;
 }
 
 .navigation-wrapper {
@@ -88,6 +88,11 @@
   width: 100px;
   opacity: 0.6;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.aceflix-logo-footer:hover {
+  opacity: 1;
 }
 
 .copyright {
@@ -176,5 +181,12 @@
   }
   .logo-link {
     font-size: 17px;
+  }
+  .about-wrapper {
+    gap: 5px;
+  }
+
+  .top-footer-wrapper .navigation-wrapper:nth-child(even) {
+    margin-top: 20px;
   }
 }
