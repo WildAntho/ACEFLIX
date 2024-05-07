@@ -111,7 +111,7 @@ export default function Comments({ comments }) {
                   </p>
                 )}
                 {readMore === index || comment.content.length <= 400 ? (
-                  <p> {comment.content} </p>
+                  <p className="comment-content"> {comment.content} </p>
                 ) : null}
                 {comment.content.length > 400 && readMore !== index && (
                   <p

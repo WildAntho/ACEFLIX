@@ -103,7 +103,7 @@
   font-size: 30px;
 }
 
-.list p {
+.comment-content {
   margin: 0px;
   font-size: 15px;
   text-align: left;
@@ -146,6 +146,7 @@
   font-size: 12px;
   font-style: italic;
   cursor: pointer;
+  margin: 5px 0;
 }
 
 .show-more-button:hover {
@@ -162,7 +163,7 @@
     margin: 0;
     padding: 0 15px;
   }
-  .list p {
+  .comment-content {
     font-size: 12px;
     line-height: 20px;
   }
@@ -175,7 +176,7 @@
 }
 
 @media (max-width: 600px) {
-  .list p {
+  .comment-content {
     font-size: 10px;
     line-height: 15px;
   }
