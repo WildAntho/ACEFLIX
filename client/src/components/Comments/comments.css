@@ -163,10 +163,14 @@
     padding: 0 15px;
   }
   .list p {
+    font-size: 12px;
     line-height: 20px;
   }
   .all-list-container {
     margin: 0 10px;
+  }
+  .show-more-button {
+    font-size: 10px;
   }
 }
 
