@@ -65,6 +65,10 @@
   font-size: 18px;
 }
 
+.contents-card-search {
+  margin-bottom: 100px;
+}
+
 .content-card-search {
   position: relative;
   display: flex;
@@ -117,7 +121,7 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 15px;
-  margin-bottom: 30px;
+  margin-bottom: 100px;
 }
 
 .card-search-container {

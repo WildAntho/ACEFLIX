@@ -80,7 +80,7 @@ export default function BoxSearch({ setDisplay, display }) {
       transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
     },
     closed: {
-      x: "120%",
+      x: "100%",
       transition: { duration: 0.5, ease: [0.76, 0, 0.24, 1] },
     },
   };

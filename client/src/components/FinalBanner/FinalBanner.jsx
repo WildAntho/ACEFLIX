@@ -56,13 +56,15 @@ export default function FinalBanner({ bannerInfo, type }) {
                   <span>{bannerInfo.original_language.toUpperCase()}</span>
                 </p>
               ) : null}
-              <p className="genres">
-                {" "}
-                {bannerInfo.genres
-                  .map((genre) => genre.name)
-                  .slice(0, 2)
-                  .join(" , ")}{" "}
-              </p>
+              {bannerInfo.genres && (
+                <p className="genres">
+                  {" "}
+                  {bannerInfo.genres
+                    .map((genre) => genre.name)
+                    .slice(0, 2)
+                    .join(" , ")}{" "}
+                </p>
+              )}
               {bannerInfo.vote_average !== 0 ? (
                 <p className="average-vote">
                   Average rating {Math.floor(bannerInfo.vote_average * 10)} %
