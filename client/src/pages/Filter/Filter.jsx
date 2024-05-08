@@ -36,7 +36,7 @@ export default function Filter() {
       setLoading(false);
       document.body.classList.remove("active");
     }, 650);
-  }, [type, idGenre, filter, page]);
+  }, [type]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
