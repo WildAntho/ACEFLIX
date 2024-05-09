@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import ReactPlayer from "react-player/youtube";
 import { IoMdClose } from "react-icons/io";
 import { motion } from "framer-motion";
+import ClipLoader from "react-spinners/ClipLoader";
 import VideoContext from "../ContextVideo";
 import "./video.css";
 
@@ -47,7 +48,7 @@ export default function Videos() {
         <motion.div
           initial={{ scale: 0 }}
           animate={{ scale: 1 }}
-          transition={{ duration: 0.4, delay: 0.2, ease: "easeInOut" }}
+          transition={{ duration: 0.4, delay: 0.2, ease: [0.76, 0, 0.24, 1] }}
           className="video-container"
         >
           <ReactPlayer
@@ -60,9 +61,17 @@ export default function Videos() {
         </motion.div>
       ) : (
         <div className="video-container-empty">
-          <h1 className="no-video">
-            {!loading ? "Video not available" : "LOADING ..."}
-          </h1>
+          {!loading ? (
+            <h1 className="no-video">Video not available"</h1>
+          ) : (
+            <ClipLoader
+              color="#b53dff"
+              loading={loading}
+              size={65}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          )}
         </div>
       )}
       <IoMdClose

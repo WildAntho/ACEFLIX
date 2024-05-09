@@ -37,10 +37,6 @@
   object-fit: cover;
   background-position: center;
 }
-#FinalBanner:hover .image-backdrop {
-  opacity: 0.3;
-  filter: blur(10px);
-}
 
 .banner-info-container {
   position: absolute;
@@ -60,6 +56,9 @@
   transition: all 1s ease-in-out;
 }
 .image-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 400px;
   height: 500px;
 }

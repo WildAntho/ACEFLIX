@@ -43,7 +43,7 @@ export default function Banner() {
           pauseOnMouseEnter: true,
         }}
         breakpoints={{
-          1025: {
+          1439: {
             direction: "vertical",
           },
           200: {

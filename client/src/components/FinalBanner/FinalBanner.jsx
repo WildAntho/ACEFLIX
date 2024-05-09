@@ -23,7 +23,6 @@ export default function FinalBanner({ bannerInfo, type }) {
       <div className="bannerContainer">
         <img className="image-backdrop" src={backImg} alt="" />
       </div>
-
       <div className="banner-info-container">
         <div className="first-container">
           <div className="image-box">
