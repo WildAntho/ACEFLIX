@@ -122,7 +122,13 @@ export default function Footer({
           <p className="navigation-link">Last Trailers</p>
         </div>
       </div>
-      <hr className="hr" />
+      <div className="hr-collaboration">
+        <hr className="hr" />
+        <p className="collaboration">
+          {" "}
+          In collaboration with Erwan BATAILLE and Curtis DAKOURI
+        </p>
+      </div>
       <div className="footer-wrapper">
         <div className="copyright">
           <p>Copyright ©️ 2024 - Aceflix</p>

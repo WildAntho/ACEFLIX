@@ -127,10 +127,27 @@
   opacity: 1;
 }
 
+.hr-collaboration {
+  position: relative;
+}
+
+.collaboration {
+  position: absolute;
+  top: -50px;
+  left: 90px;
+  color: whitesmoke;
+  opacity: 0.4;
+  font-size: 13px;
+}
+
 .hr {
   color: whitesmoke;
   opacity: 0.6;
   margin: 30px 90px;
+}
+
+#insta {
+  font-size: 20px;
 }
 
 @media (max-width: 1025px) {
@@ -149,6 +166,12 @@
   }
   .copyright {
     margin-bottom: 100px;
+  }
+  .hr-collaboration {
+    margin-top: 80px;
+  }
+  .collaboration {
+    left: 30px;
   }
 }
 
@@ -182,11 +205,17 @@
   .logo-link {
     font-size: 17px;
   }
+  #insta {
+    font-size: 18px;
+  }
   .about-wrapper {
     gap: 5px;
   }
 
   .top-footer-wrapper .navigation-wrapper:nth-child(even) {
     margin-top: 20px;
+  }
+  .collaboration {
+    font-size: 10px;
   }
 }
