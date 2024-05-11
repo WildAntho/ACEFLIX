@@ -1,5 +1,6 @@
 .card-container {
   position: relative;
+  cursor: grab;
 }
 
 .img-container::after {
@@ -238,5 +239,19 @@
 
   .play-icon {
     font-size: 14px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .img-cinema {
+    height: 1000px;
+  }
+  .bloc-black {
+    height: 1000px;
+  }
+  .img-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
   }
 }

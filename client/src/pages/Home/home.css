@@ -59,6 +59,10 @@
   margin: 0 90px 0 90px;
 }
 
+.swiper-slide {
+  overflow: visible;
+}
+
 @media (max-width: 1025px) {
   .swiper-button-prev {
     display: none;

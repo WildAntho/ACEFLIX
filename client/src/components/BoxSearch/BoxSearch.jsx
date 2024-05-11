@@ -17,7 +17,7 @@ export default function BoxSearch({ setDisplay, display }) {
   const [searchResults, setSearchResults] = useState([]);
   const [input, setInput] = useState("");
 
-  const urlSearch = `https://api.themoviedb.org/3/trending/all/week?language=en-US&api_key=${apiKey}`;
+  const urlSearch = `https://api.themoviedb.org/3/trending/all/day?language=en-US&api_key=${apiKey}`;
   const urlInputSearch = `https://api.themoviedb.org/3/search/multi?query=${input}&include_adult=false&language=en-US&page=1&api_key=${apiKey}`;
 
   useEffect(() => {
