@@ -244,10 +244,10 @@
 
 @media (min-width: 1919px) {
   .img-cinema {
-    height: 850px;
+    height: 800px;
   }
   .bloc-black {
-    height: 850px;
+    height: 800px;
   }
   .img-container::after {
     content: "";
