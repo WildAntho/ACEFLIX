@@ -63,7 +63,7 @@
   gap: 10px;
 }
 .card-filter {
-  width: 230px;
+  width: 23%;
 }
 
 .infinite-scroll-component__outerdiv {
@@ -136,9 +136,6 @@ a {
   .filter-page {
     margin: 0 10px;
   }
-  .card-filter {
-    width: 180px;
-  }
   .type-movie-serie {
     left: 40px;
   }
@@ -152,7 +149,7 @@ a {
     gap: 5px;
   }
   .card-filter {
-    width: 120px;
+    width: 30%;
   }
   .type-movie-serie {
     left: 25px;
@@ -188,12 +185,6 @@ a {
 
 @media (min-width: 1919px) {
   .card-filter {
-    width: 300px;
-  }
-}
-
-@media (min-width: 2559px) {
-  .card-filter {
-    width: 400px;
+    width: 19%;
   }
 }

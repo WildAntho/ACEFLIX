@@ -13,8 +13,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 650px;
-  width: 1000px;
+  height: 85%;
+  width: 85%;
 }
 
 .video-container-empty {
