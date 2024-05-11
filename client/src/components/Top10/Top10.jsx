@@ -13,10 +13,8 @@ import "swiper/css/free-mode";
 export default function Top10({ status, uniqueTop }) {
   // URL des Movies et Series les mieux notés
   const theApiKey = import.meta.env.VITE_API_KEY;
-  const moviesFetchURL =
-  `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${theApiKey}`;
-  const seriesFetchURL =
-  `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1&api_key=${theApiKey}`;
+  const moviesFetchURL = `https://api.themoviedb.org/3/movie/top_rated?language=en-US&page=1&api_key=${theApiKey}`;
+  const seriesFetchURL = `https://api.themoviedb.org/3/tv/top_rated?language=en-US&page=1&api_key=${theApiKey}`;
 
   // Fetch de ces contenus via le Hook useFetch (20 de chaque)
   const {
@@ -59,8 +57,7 @@ export default function Top10({ status, uniqueTop }) {
           modules={[Navigation, FreeMode]}
           spaceBetween={10}
           slidesPerView={6}
-          // eslint-disable-next-line react/jsx-boolean-value
-          freeMode={true}
+          freeMode
           centeredSlides={false}
           breakpoints={{
             1200: {
