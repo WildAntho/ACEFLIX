@@ -4,6 +4,12 @@
 
 @media (min-width: 1919px) {
   .swipper-cinema-content {
+    height: 850px;
+  }
+}
+
+@media (min-width: 2500px) {
+  .swipper-cinema-content {
     height: 1000px;
   }
 }

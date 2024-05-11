@@ -244,6 +244,20 @@
 
 @media (min-width: 1919px) {
   .img-cinema {
+    height: 850px;
+  }
+  .bloc-black {
+    height: 850px;
+  }
+  .img-container::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media (min-width: 2500px) {
+  .img-cinema {
     height: 1000px;
   }
   .bloc-black {
