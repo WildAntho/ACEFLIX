@@ -70,14 +70,6 @@ export default function Filter() {
         <div className="loading-container">
           <ClipLoader
             color="#b53dff"
-            loading={loadingId}
-            size={65}
-            aria-label="Loading Spinner"
-            data-testid="loader"
-          />
-          <ClipLoader
-            color="#b53dff"
-            loading={loadingFilter}
             size={65}
             aria-label="Loading Spinner"
             data-testid="loader"
