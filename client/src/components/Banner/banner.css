@@ -2,7 +2,7 @@
   height: 600px;
 }
 
-@media (min-width: 2000px) {
+@media (min-width: 1919px) {
   .swipper-cinema-content {
     height: 1000px;
   }
