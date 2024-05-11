@@ -1,11 +1,7 @@
 import PropTypes from "prop-types";
 import "./actors.css";
 
-function Actors({ data, loading, error, bannerInfo }) {
-  if (loading) {
-    return <div className="container">Loading...</div>;
-  }
-
+function Actors({ data, error, bannerInfo }) {
   if (error) {
     return <div className="container">Error: {error}</div>;
   }
@@ -49,7 +45,6 @@ Actors.propTypes = {
       profile_path: PropTypes.string,
     }).isRequired
   ).isRequired,
-  loading: PropTypes.bool.isRequired,
   error: PropTypes.string,
   bannerInfo: PropTypes.shape({
     overview: PropTypes.string,
