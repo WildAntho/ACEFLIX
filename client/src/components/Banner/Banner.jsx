@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /* eslint-disable import/no-unresolved */
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -26,7 +27,12 @@ export default function Banner() {
 
   let newCinema = [];
   if (cinemaContent) {
-    newCinema = cinemaContent.slice(0, 5);
+    for (const value of cinemaContent) {
+      if (value.backdrop_path) {
+        newCinema.push(value);
+      }
+    }
+    newCinema = newCinema.slice(0, 7);
   }
 
   return (

@@ -50,7 +50,7 @@ export default function BannerCard({ overview, title, id }) {
     <div className="card-container">
       <div className="img-container">
         <div className="bloc-black">1</div>
-        {backdrop && (
+        {backdrop?.length > 0 && (
           <img
             className="img-cinema"
             src={`https://image.tmdb.org/t/p/original${backdrop[0].file_path}`}
