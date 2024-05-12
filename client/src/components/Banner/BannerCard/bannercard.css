@@ -48,13 +48,14 @@
 
 .movie-title {
   color: whitesmoke;
+  margin: 15px 0;
   font-size: 45px;
   z-index: 2;
 }
 
 .movie-overview {
   color: whitesmoke;
-  max-width: 400px;
+  max-width: 600px;
   z-index: 2;
   font-size: 13px;
 }

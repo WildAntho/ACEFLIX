@@ -11,13 +11,11 @@
   background-color: transparent;
   color: #b53dff;
   cursor: pointer;
-  opacity: 0.7;
+  opacity: 1;
   transition: all 0.2s ease-in-out;
   margin-left: 90px;
 }
 .burger-btn:hover {
-  opacity: 1;
-  filter: drop-shadow(0 0 20px #b53dff);
   transform: scale(0.9);
 }
 
